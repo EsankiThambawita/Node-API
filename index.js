@@ -1,15 +1,16 @@
-// index.js
-const express = require("express");
-const app = express();
+const express = require("express"); // Load Express
+const app = express(); // Create the app
 const PORT = 3000;
 
-app.use(express.json()); // to parse JSON request bodies
+app.use(express.json()); // Middleware to automatically parse incoming JSON data
 
-// Sample in-memory data
 let users = [
-  { id: 1, name: "Esanki" },
-  { id: 2, name: "Lakvindee" },
+  // This is an array storing users in memory (temporary data storage)
+  { id: 1, name: "Elle" },
+  { id: 2, name: "Jane" },
 ];
+
+//API Endpoints
 
 // GET all users
 app.get("/users", (req, res) => {
